@@ -1,16 +1,19 @@
 CREATE TYPE task_status AS ENUM ('pending', 'in_progress', 'completed', 'cancelled');
 
-CREATE TABLE "user" (
+CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    username VARCHAR(255) UNIQUE NOT NULL,
-    user_password VARCHAR(255) NOT NULL,
-    email VARCHAR(255) UNIQUE
+    username Text UNIQUE NOT NULL,
+    password Text NOT NULL,
+    email Text UNIQUE,
+	 created_at TIMESTAMPTZ DEFAULT NOW(),
+    updated_at TIMESTAMPTZ DEFAULT NOW()
 );
+
 
 CREATE TABLE tasks (
     id SERIAL PRIMARY KEY,
-    user_id INT NOT NULL REFERENCES "user"(id) ON DELETE CASCADE,
-    task_name VARCHAR(255) NOT NULL,
+    user_id INT NOT NULL REFERENCES users (id) ON DELETE CASCADE,
+    task_name Text NOT NULL,
     due_date TIMESTAMP,
     description TEXT,
     status task_status NOT NULL DEFAULT 'pending',
@@ -20,9 +23,11 @@ CREATE TABLE tasks (
 
 CREATE TABLE subtask (
     id SERIAL PRIMARY KEY,
-    task_id INT NOT NULL REFERENCES tasks(id) ON DELETE CASCADE,
-    name VARCHAR(255) NOT NULL,
+    task_id INT NOT NULL REFERENCES tasks (id) ON DELETE CASCADE,
+    name Text NOT NULL,
     status task_status NOT NULL DEFAULT 'pending',
     due_date TIMESTAMP,
-    description TEXT
+    description TEXT,
+	created_at TIMESTAMPTZ DEFAULT NOW(),
+    updated_at TIMESTAMPTZ DEFAULT NOW()
 );
