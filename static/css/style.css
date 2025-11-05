@@ -18,7 +18,6 @@ body {
     background: transparent;
     border: 3px solid;
     backdrop-filter: blur(10px);
-    /* height: 30px; */
 }
 
 #center h1{
@@ -56,7 +55,7 @@ body {
     padding: 2px 5px 2px 20px;
 }
 
-#loginbtn{
+#btn{
     width: 80%;
     height: 30px;
     background: rgb(83, 83, 77);

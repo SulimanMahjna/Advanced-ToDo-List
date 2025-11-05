@@ -9,12 +9,10 @@
 <body>
     <div id="all">
         <div id="container">
-            <h1 id="todo">My To-Do List</h1>
+            <h1 id="todo">Add a sub task</h1>
             <div class="input-section">
-            <input type="text" id="taskInput" placeholder="Add a task">
-            <!-- <input type="text" id="taskdescreption" placeholder="Descripe the Task"> -->
-                <!-- <label for="message">Descreption:</label> -->
-                <textarea id="taskdescreption" name="message" rows="5" cols="30" placeholder="Descripe your task"></textarea>
+            <input type="text" id="taskInput" placeholder="Add a sub task">
+            <textarea id="taskdescreption" name="message" rows="5" cols="30" placeholder="Descripe your task"></textarea>
             <input type="date" id="taskdate">
             <label for="Crud">Status: </label>
             <div id="dropdown">
@@ -25,20 +23,20 @@
             <option value="cancelled">Cancelled</option>
             </select>
             </div>
-            <button id="btn">Add Task</button>
+            <button id="btn">Add Sub-Task</button>
         </div>
     
         <div id="table">
             <ul id="taskList">
                 <li><input type="checkbox"> Task 1  
-                <div id="imgcon">
                 <img src="../static/img/delete.png" alt="delet" class="deletebtn"> 
                 <img src="../static/img/edit-text.png" alt="edit" class="editbtn"> 
-                </div>
+                <button id="exbtn">Expand</button></li>
             </ul>
         </div>
 
     </div>
+
     <script>
   const taskList = document.getElementById("taskList");
 
@@ -62,6 +60,5 @@
     }
   });
 </script>
-
 </body>
 </html>

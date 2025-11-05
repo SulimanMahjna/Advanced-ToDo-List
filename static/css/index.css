@@ -1,0 +1,123 @@
+#btn{
+    width: 30%;
+    height: 30px;
+    background: rgb(83, 83, 77);
+    border-radius: 50px;
+    border: none;
+    margin-top: 10px;
+    margin-left: 40px;
+    font-weight: bold;
+    font-size: medium;
+}
+
+#container{
+    position: relative;
+    width: 900px;
+    background-color: white;
+    color: black;
+    border-radius: 20px 20px 20px 20px ;
+    padding: 3px;
+    background: transparent;
+    border: 3px solid;
+    backdrop-filter: blur(10px);
+    margin-top: 1px;
+}
+
+#center h1{
+    font-size: 35px;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: maroon;
+    background-image: url();
+    margin: 50px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(/static/img/WhatsApp\ Image\ 2024-06-02\ at\ 17.54.00.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+#taskInput{
+    width: 10%;
+    height: 35px;
+    background: rgb(165, 165, 160);
+    border: none;
+    border-radius: 40px;
+    font-size: 15px;
+    padding: 2px 5px 2px 20px;
+}
+
+#taskdescreption{
+    width: 25%;
+    height: 27px;
+    background: rgb(165, 165, 160);
+    border: none;
+    border-radius: 40px;
+    font-size: 15px;
+    padding: 2px 5px 2px 20px;
+    margin-top: 6px;
+}
+
+#taskdate{
+    width: 15%;
+    height: 35px;
+    background: rgb(165, 165, 160);
+    border: none;
+    border-radius: 40px;
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 2px 5px 2px 20px;
+}
+
+#dropdown{
+    float: right;
+    margin-right: 200px;
+    margin-top: 9px;
+}
+
+select {
+    border:0;
+    background:transparent;
+    height:32px;
+    border:1px solid #d8d8d8;
+    width:100px;
+}
+
+img {
+  width: 20px; 
+  height: auto; 
+}
+
+#table{
+    position: absolute;
+    width: 900px;
+    background-color: wheat;
+    color: black;
+    border-radius: 20px 20px 20px 20px ;
+    padding: 3px;
+    background: transparent;
+    border: 3px solid;
+    backdrop-filter: blur(10px);
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-start;
+    backdrop-filter: blur(10px);
+    background-clip: padding-box;
+    isolation: isolate;
+}
+
+#imgcon{
+    display: flex;
+    gap: 10px;
+    margin-left: 750px;
+    margin-top: -20px;
+}
+
+
