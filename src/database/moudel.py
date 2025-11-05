@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String, DateTime
 from datetime import datetime
 
+user_table = user(
 
    Column('id', Integer, primary_key=True),
    Column('username', String(100), unique=True),  
@@ -8,6 +9,7 @@ from datetime import datetime
    Column('user_password', String(100)),          
    Column('created_at', DateTime, default=datetime.utcnow),
    Column('updated_at', DateTime, default=datetime.utcnow)
+)
 
 
 
